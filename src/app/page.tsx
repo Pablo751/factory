@@ -34,9 +34,9 @@ const ProductionPlanner = () => {
     { item: 'Clips D', current: 1539, usage: 1539, status: 'warning' }
   ];
 
-  const getDaysInMonth = (year, month) => {
+  const getDaysInMonth = (year: number, month: number): Date[] => {
     const date = new Date(year, month, 1);
-    const days = [];
+    const days: Date[] = [];
     while (date.getMonth() === month) {
       days.push(new Date(date));
       date.setDate(date.getDate() + 1);
